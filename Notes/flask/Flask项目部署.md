@@ -172,14 +172,14 @@ mysql -u root -p
    ```
    # 给用户最大权限  [本项目选择这条命令,password要替换成自己需要设置的root密码]
    grant all privileges on *.* to 'root'@'%' identified by 'password';
-
+   
    # 给部分权限(test 数据库)
-
+   
    grant all privileges on test.* to 'root'@'%' identified by 'password' with grant option;
-
+   
    # 刷新权限表
    flush privileges;
-
+   
    # 查看
    show grants for 'root'@'localhost';
    ```
@@ -190,7 +190,7 @@ mysql -u root -p
 
    ![](res/na.png)
 
-   ​
+   
 
 ###### 3. 安装项目需要使用的虚拟环境
 
@@ -217,11 +217,11 @@ mysql -u root -p
 
    ```
    pip3 install -r re_install.txt
-
+   
    其中re_install.txt文件中记录的是需要安装包的名称以及对应的版本
    ```
 
-   ​
+   
 
 ##### 部署
 
@@ -266,9 +266,9 @@ mysql -u root -p
 
    ```
    sudo firewall-cmd --permanent --zone=public --add-service=http 
-
+   
    sudo firewall-cmd --permanent --zone=public --add-service=https
-
+   
    sudo firewall-cmd --reloa
    ```
 
@@ -312,7 +312,7 @@ srcf是项目文件，该目录下上传的是目录代码
 
 ###### 4. 配置nginx.conf文件
 
-首先进入conff文件夹中创建一个名称为ajnginx.conf 的文件.
+首先进入conf文件夹中创建一个名称为ajnginx.conf 的文件.
 
 每一个项目对应有一个自己定义的nginx的配置文件，比如爱家项目，我定义为ajnginx.conf文件.具体配置内容如下:
 
